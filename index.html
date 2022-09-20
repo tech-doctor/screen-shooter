@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+    <title>Screen-shooter</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+</script>
+<body>
+  <div class="container">
+    <div class="button">
+      <button 
+        onclick="takeScreenshot()"
+        class="start_button">
+        start
+      </button>
+    </div>
+    <div class="screenshot_div">
+      <div class="screen">
+        <!-- Screenshot -->
+      </div>
+      <div class="request_div">
+        <p class="request">Will you like to add comment?</p>
+        <div class="request_buttons">
+          <img 
+          onclick="noComment()"
+          class="no"
+          width="19px"
+          height="19px"
+          src="https://www.citypng.com/public/uploads/small/31631916723iet1qmtwj6smgfp9el0t8xtwjxazlbllx0xnmaqekbqchypxomesnqhnakanluczdcesdvyblbwbq5sbo4v24flp2xrulzr0owdc.png"/>
+
+          <img 
+          onclick="allowComment()"
+          class="yes"
+          width="25px"
+          height="22px"
+          src="https://www.freeiconspng.com/uploads/check-mark-png-transparent-9.png"/>
+        </div> 
+      </div>
+    </div>
+    <div class="form_result">
+      <form
+       onsubmit="onSubmitComment(event)"
+      >
+        <textarea 
+         placeholder="Add a comment..."
+         name="comment"
+        class="wideInput" rows="6" cols="34" required></textarea><br/>
+        <div class="button">
+          <button type="submit">Add</button>
+        </div> 
+      </form>
+      <div class="result">
+        
+      </div>
+    </div>
+    <div class="share">
+      share buttons
+    </div>
+  </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
