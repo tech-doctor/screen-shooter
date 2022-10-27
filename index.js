@@ -57,4 +57,13 @@ const onSubmitComment = (event) => {
 }
 
 
+
+function shareOnFacebook(){
+  const navUrl =
+    'https://twitter.com/intent/tweet?text=' +
+    'https://github.com/knoldus/angular-facebook-twitter.git';
+  window.open(navUrl);
+}
+
+
   
